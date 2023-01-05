@@ -1,10 +1,10 @@
 # Santa App
 
 Getting started with create-react-app, during christmas break I made simple app where you can:
--Add new childs to Santa's list;
--Assign gifts to them;
--Remove gifts from stock;
--Inspect single gift element;
+* Add new childs to Santa's list;
+* Assign gifts to childs;
+* Remove gifts from stock;
+* Inspect single gift element;
 
 
 ## Available Scripts
