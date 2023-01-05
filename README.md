@@ -5,7 +5,8 @@ Getting started with create-react-app, during christmas break I made simple app 
 * Assign gifts to childs;
 * Remove gifts from stock;
 * Inspect single gift element;
-
+## Made with:
+<img src="https://skillicons.dev/icons?i=ts,react" />
 
 ## Available Scripts
 
