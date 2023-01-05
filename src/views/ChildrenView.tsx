@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { ChildEntity, GiftEntity, GetAllChildRes } from "types";
+import { GetAllChildRes } from "types";
 
 import { fetchData } from "../utils/fetchData";
 import { ChildrenTableGift } from "../components/Children/ChildrenTableGift";
@@ -15,7 +15,6 @@ export const ChildrenView = () => {
             const res = await fetchData(`child`);
             const data = await res.json();
             setData(data);
-
         })();
     }
     useEffect(() => {
@@ -30,7 +29,6 @@ export const ChildrenView = () => {
             </div>
         </div>
     }
-
     return <>
 
         <ChildrenTableGift childrenList={data.childrenList} giftList={data.giftList} />

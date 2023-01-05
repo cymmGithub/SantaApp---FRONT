@@ -24,9 +24,7 @@ export const ChildrenSelectGift = (props: Props) => {
             body: JSON.stringify({
                 giftId: selected,
             } as SetGiftForChildReq)
-
         })
-
     }
     return (
         < form onSubmit={sendForm}>

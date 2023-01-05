@@ -1,4 +1,4 @@
-import { ListItem, Table, Tbody, Th, Thead, Tr, UnorderedList } from "@chakra-ui/react";
+import { Table, Tbody, Th, Thead, Tr } from "@chakra-ui/react";
 import React from "react";
 import { ChildEntity, GiftEntity } from "types";
 import { ChildrenTableRow } from "./ChildrenTableRow";

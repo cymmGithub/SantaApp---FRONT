@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
 import { GiftEntity } from "types";
 import { AddGift } from "../components/AddGift/AddGift";
 import { GiftsList } from "../components/Gifts/GiftsList";
-
-import '../App.css'
 import { fetchData } from "../utils/fetchData";
+import '../App.css'
 
 export const GiftsView = () => {
     const [giftsList, setGiftsList] = useState<GiftEntity[] | null>(null);
@@ -29,7 +27,6 @@ export const GiftsView = () => {
             </div>
         </div>
     }
-
     return <div className="App">
         <GiftsList gifts={giftsList} onGiftsChange={refreshGifts} />
         <AddGift onGiftsChange={refreshGifts} />

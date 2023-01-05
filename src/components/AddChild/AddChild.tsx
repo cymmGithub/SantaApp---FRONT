@@ -12,7 +12,6 @@ export const AddChild = (props: Props) => {
     const [form, setForm] = useState<CreateChildReq>({
         name: '',
         giftId: '',
-
     });
     const [loading, setLoading] = useState<boolean>(false);
     const updateForm = (key: string, value: any) => {
@@ -32,17 +31,13 @@ export const AddChild = (props: Props) => {
             body: JSON.stringify(form),
         });
 
-
         if (res.status === 200) {
             props.onChildsChange();
             return;
         }
-
         setLoading(false);
 
     }
-
-
     return <form onSubmit={sendForm}>
         <h2>Add Child</h2>
         <input

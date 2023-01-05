@@ -1,5 +1,5 @@
-import { Button, Select, Td, Tr } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Td, Tr } from "@chakra-ui/react";
+import React from "react";
 import { ChildEntity, GiftEntity } from "types";
 import './Children.css';
 import { ChildrenSelectGift } from "./ChildrenSelectGift";

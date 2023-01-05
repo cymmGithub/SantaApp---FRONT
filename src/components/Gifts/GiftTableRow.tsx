@@ -1,10 +1,9 @@
-import { Alert } from "@mui/material";
 import React, { MouseEvent } from "react";
 import { GiftEntity } from "types";
 import { Link } from "react-router-dom";
+import { fetchData } from "../../utils/fetchData";
 
 import './Gifts.css'
-import { fetchData } from "../../utils/fetchData";
 
 interface Props {
     gift: GiftEntity;
@@ -23,7 +22,6 @@ export const GiftTableRow = (props: Props) => {
             method: 'DELETE',
         });
         props.onGiftsChange();
-
     }
 
     return (

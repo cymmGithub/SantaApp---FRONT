@@ -1,8 +1,7 @@
-import { Button, propNames } from "@chakra-ui/react";
-import { valueToPercent } from "@mui/base";
+import { Button } from "@chakra-ui/react";
 import React, { FormEvent, useState } from "react";
 import { fetchData } from "../../utils/fetchData";
-import { CreateGiftReq, GiftEntity } from "types";
+import { CreateGiftReq } from "types";
 
 
 interface Props {
@@ -14,7 +13,6 @@ export const AddGift = (props: Props) => {
     const [form, setForm] = useState<CreateGiftReq>({
         name: '',
         count: 0,
-
     });
     const [loading, setLoading] = useState<boolean>(false);
     const updateForm = (key: string, value: any) => {
@@ -33,32 +31,23 @@ export const AddGift = (props: Props) => {
             },
             body: JSON.stringify(form),
         });
-
-
         if (res.status === 200) {
             props.onGiftsChange();
             return;
         }
-
         setLoading(false);
-
     }
-
-
     return <form onSubmit={sendForm}>
         <h2>Add Gift</h2>
         <input
             type="text" placeholder="Add Gift"
             value={form.name}
             onChange={e => updateForm('name', e.target.value)} />
-
         <input
             type="number"
             value={form.count}
             onChange={e => updateForm('count', Number(e.target.value))}
         />
-
-
         <Button isLoading={loading} size='md' type="submit">+</Button>
     </form>
 
