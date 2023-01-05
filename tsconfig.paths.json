@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "types": [
+                "../../../etap5Ts/tyg3/zadania/santaApp/types"
+            ]
+        }
+    }
+}
