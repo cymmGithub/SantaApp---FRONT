@@ -20,6 +20,9 @@ export const GiftTableRow = (props: Props) => {
 
         const res = await fetchData(`gift/${props.gift.id}`, {
             method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
         });
         props.onGiftsChange();
     }

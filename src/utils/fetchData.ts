@@ -1,6 +1,6 @@
 interface Options {
     method: string,
-    headers?: {
+    headers: {
         'Content-Type': string,
     },
     body?: string,
