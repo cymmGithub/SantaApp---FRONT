@@ -7,6 +7,7 @@ interface Props {
 
     childrenList: ChildEntity[];
     giftList: GiftEntity[];
+    onChildsChange: () => void;
 }
 export const ChildrenTableGift = (props: Props) => {
 
@@ -14,13 +15,15 @@ export const ChildrenTableGift = (props: Props) => {
         <Table variant='simple'>
             <Thead>
                 <Tr>
-                    <Th>Child</Th>
-                    <Th>Gift</Th>
+                    <Th>Child 🧒</Th>
+                    <Th>Gift 🎁</Th>
+                    <Th>Action</Th>
+
                 </Tr>
             </Thead>
             <Tbody>
                 {
-                    props.childrenList.map(child => <ChildrenTableRow key={child.id} child={child} gifts={props.giftList} />)
+                    props.childrenList.map(child => <ChildrenTableRow key={child.id} child={child} gifts={props.giftList} onChildsChange={props.onChildsChange} />)
                 }
             </Tbody>
         </Table>

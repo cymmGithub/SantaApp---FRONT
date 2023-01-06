@@ -1,5 +1,6 @@
 import { Td, Tr } from "@chakra-ui/react";
-import React from "react";
+import React, { MouseEvent } from "react";
+import { fetchData } from "../../utils/fetchData";
 import { ChildEntity, GiftEntity } from "types";
 import './Children.css';
 import { ChildrenSelectGift } from "./ChildrenSelectGift";
@@ -8,10 +9,28 @@ import { ChildrenSelectGift } from "./ChildrenSelectGift";
 interface Props {
     child: ChildEntity;
     gifts: GiftEntity[];
+    onChildsChange: () => void;
+
 }
 
 export const ChildrenTableRow = (props: Props) => {
 
+
+    const deleteChild = async (e: MouseEvent) => {
+        e.preventDefault();
+
+        if (!window.confirm(`Are you sure you want to remove ${props.child.name}`)) {
+            return;
+        }
+
+        const res = await fetchData(`child/${props.child.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        props.onChildsChange();
+    }
     return <Tr>
         <Td className="ChildrenTableRow__childName">{props.child.name}</Td>
         <Td>
@@ -20,6 +39,10 @@ export const ChildrenTableRow = (props: Props) => {
                 child={props.child}
                 selectedId={props.child.giftId}
             />
+        </Td>
+        <Td>
+            <a href="#" onClick={deleteChild}>🗑️</a>
+
         </Td>
     </Tr>
 

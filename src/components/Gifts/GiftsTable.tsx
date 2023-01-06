@@ -2,6 +2,7 @@ import { GiftEntity } from "types";
 import { GiftTableRow } from "./GiftTableRow";
 
 import './Gifts.css'
+import { Table, Tbody, Th, Thead, Tr } from "@chakra-ui/react";
 
 interface Props {
     gifts: GiftEntity[];
@@ -11,22 +12,22 @@ interface Props {
 export const GiftsTable = (props: Props) => {
 
     return <>
-        <table className="GiftsTable__table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Count</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
+        <Table className="GiftsTable__table">
+            <Thead>
+                <Tr>
+                    <Th>Name</Th>
+                    <Th>Count</Th>
+                    <Th>Action</Th>
+                </Tr>
+            </Thead>
+            <Tbody>
                 {
                     props.gifts.map(gift => (
                         <GiftTableRow gift={gift} key={gift.id} onGiftsChange={props.onGiftsChange} />
                     ))
                 }
-            </tbody>
-        </table>
+            </Tbody>
+        </Table>
     </>
 }
 

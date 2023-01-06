@@ -3,6 +3,8 @@ import React, { FormEvent, useState } from "react";
 import { fetchData } from "../../utils/fetchData";
 import { CreateChildReq } from "types";
 
+import '../../App.css';
+
 interface Props {
     onChildsChange: () => void;
 }
@@ -40,11 +42,11 @@ export const AddChild = (props: Props) => {
     }
     return <form onSubmit={sendForm}>
         <h2>Add Child</h2>
-        <input
+        <input className="AddChild__input"
             type="text" placeholder="Add Child"
             value={form.name}
             onChange={e => updateForm('name', e.target.value)} />
-        <Button isLoading={loading} size='md' type="submit">+</Button>
+        <Button isLoading={loading} size='sm' type="submit">+</Button>
     </form>
 
 }

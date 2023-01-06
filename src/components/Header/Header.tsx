@@ -8,7 +8,12 @@ export const Header = () => {
 
     const colorOfLink = ({ isActive }: {
         isActive: boolean,
-    }) => ({ color: isActive ? 'green' : 'red' });
+    }) => ({
+        borderRadius: '5px',
+        transparency: '50%',
+        fontWeight: isActive ? 'bold' : 'normal',
+        color: isActive ? '#7CB9E8' : 'gray',
+    });
 
     return <div className="Header__style">
         <h1 className='App__title'>Santa App</h1>

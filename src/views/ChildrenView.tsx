@@ -31,7 +31,7 @@ export const ChildrenView = () => {
     }
     return <>
 
-        <ChildrenTableGift childrenList={data.childrenList} giftList={data.giftList} />
+        <ChildrenTableGift onChildsChange={refreshChilds} childrenList={data.childrenList} giftList={data.giftList} />
         <AddChild onChildsChange={refreshChilds} />
     </>
 

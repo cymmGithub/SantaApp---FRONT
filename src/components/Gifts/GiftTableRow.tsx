@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { fetchData } from "../../utils/fetchData";
 
 import './Gifts.css'
+import { Td, Tr } from "@chakra-ui/react";
 
 interface Props {
     gift: GiftEntity;
@@ -24,20 +25,22 @@ export const GiftTableRow = (props: Props) => {
                 'Content-Type': 'application/json',
             }
         });
+
+
         props.onGiftsChange();
     }
 
     return (
-        <tr>
-            <td>
+        <Tr>
+            <Td>
                 <Link to={`/gift/${props.gift.id}`} className="GiftTableRow__oneElement">
                     {props.gift.name}
                 </Link>
-            </td>
-            <td>{props.gift.count}</td>
-            <td>
+            </Td>
+            <Td>{props.gift.count}</Td>
+            <Td>
                 <a href="#" onClick={deleteGift}>🗑️</a>
-            </td>
-        </tr>
+            </Td>
+        </Tr>
     )
 }
