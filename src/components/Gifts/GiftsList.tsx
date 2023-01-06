@@ -10,10 +10,10 @@ interface Props {
 }
 
 export const GiftsList = (props: Props) => {
-    return <>
+    return <div className="GiftTable__container">
         <h1 className="GiftsList__title">Gifts</h1>
         <GiftsTable gifts={props.gifts} onGiftsChange={props.onGiftsChange}></GiftsTable>
 
-    </>
+    </div>
 
 }
