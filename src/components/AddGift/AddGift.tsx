@@ -3,6 +3,8 @@ import React, { FormEvent, useState } from "react";
 import { fetchData } from "../../utils/fetchData";
 import { CreateGiftReq } from "types";
 
+import '../Gifts/Gifts.css';
+
 
 interface Props {
     onGiftsChange: () => void;
@@ -37,18 +39,19 @@ export const AddGift = (props: Props) => {
         }
         setLoading(false);
     }
-    return <form onSubmit={sendForm}>
-        <h2>Add Gift</h2>
+    return <form onSubmit={sendForm} className='AddGift__form'>
         <input
+            className="AddGift__input"
             type="text" placeholder="Add Gift"
             value={form.name}
             onChange={e => updateForm('name', e.target.value)} />
         <input
+            className="AddGift__input"
             type="number"
             value={form.count}
             onChange={e => updateForm('count', Number(e.target.value))}
         />
-        <Button isLoading={loading} size='md' type="submit">+</Button>
+        <Button isLoading={loading} size='md' type="submit" colorScheme='twitter'>Save</Button>
     </form>
 
 }

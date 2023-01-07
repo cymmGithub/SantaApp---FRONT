@@ -12,14 +12,16 @@ export const Header = () => {
         borderRadius: '5px',
         transparency: '50%',
         fontWeight: isActive ? 'bold' : 'normal',
-        color: isActive ? '#7CB9E8' : 'gray',
+        color: isActive ? '#1DA1F2' : 'gray',
     });
 
-    return <div className="Header__style">
+    return <div>
         <h1 className='App__title'>Santa App</h1>
+        <span className='Header__NavLink'>
+            Menu:  <NavLink style={colorOfLink} to="/child">Switch to Childs</NavLink> |  <NavLink style={colorOfLink} to="/gift">Switch to Gifts</NavLink>
+            <hr />
+        </span>
 
-        Menu:  <NavLink style={colorOfLink} to="/child">Switch to Childs</NavLink> |  <NavLink style={colorOfLink} to="/gift">Switch to Gifts</NavLink>
-        <hr />
 
     </div>
 }

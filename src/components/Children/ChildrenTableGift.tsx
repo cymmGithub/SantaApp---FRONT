@@ -12,7 +12,7 @@ interface Props {
 export const ChildrenTableGift = (props: Props) => {
 
     return <div className="ChildrenTableGift__container">
-        <Table variant='simple'>
+        <Table variant='simple' size='sm'>
             <Thead>
                 <Tr>
                     <Th>Child 🧒</Th>

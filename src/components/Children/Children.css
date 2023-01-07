@@ -1,6 +1,7 @@
 .ChildrenTableGift__container {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: fit-content;
 
 
@@ -8,4 +9,11 @@
 
 .ChildrenTableRow__childName {
     font-weight: bold;
+}
+
+.ChldrenTableRow__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
 }

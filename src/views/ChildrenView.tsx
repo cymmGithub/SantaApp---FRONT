@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { GetAllChildRes } from "types";
-
 import { fetchData } from "../utils/fetchData";
 import { ChildrenTableGift } from "../components/Children/ChildrenTableGift";
 import { AddChild } from "../components/AddChild/AddChild";
+
 
 export const ChildrenView = () => {
 
@@ -30,7 +30,6 @@ export const ChildrenView = () => {
         </div>
     }
     return <>
-
         <ChildrenTableGift onChildsChange={refreshChilds} childrenList={data.childrenList} giftList={data.giftList} />
         <AddChild onChildsChange={refreshChilds} />
     </>

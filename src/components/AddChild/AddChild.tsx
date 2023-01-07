@@ -41,12 +41,11 @@ export const AddChild = (props: Props) => {
 
     }
     return <form onSubmit={sendForm}>
-        <h2>Add Child</h2>
         <input className="AddChild__input"
             type="text" placeholder="Add Child"
             value={form.name}
             onChange={e => updateForm('name', e.target.value)} />
-        <Button isLoading={loading} size='sm' type="submit">+</Button>
+        <Button isLoading={loading} size='md' type="submit" colorScheme='twitter'>Save</Button>
     </form>
 
 }

@@ -2,8 +2,10 @@ import { Td, Tr } from "@chakra-ui/react";
 import React, { MouseEvent } from "react";
 import { fetchData } from "../../utils/fetchData";
 import { ChildEntity, GiftEntity } from "types";
-import './Children.css';
 import { ChildrenSelectGift } from "./ChildrenSelectGift";
+
+import './Children.css';
+
 
 
 interface Props {
@@ -33,14 +35,14 @@ export const ChildrenTableRow = (props: Props) => {
     }
     return <Tr>
         <Td className="ChildrenTableRow__childName">{props.child.name}</Td>
-        <Td>
+        <Td className="ChildrenSelectGift__style">
             <ChildrenSelectGift
                 giftsList={props.gifts}
                 child={props.child}
                 selectedId={props.child.giftId}
             />
         </Td>
-        <Td>
+        <Td className="ChldrenTableRow__action">
             <a href="#" onClick={deleteChild}>🗑️</a>
 
         </Td>

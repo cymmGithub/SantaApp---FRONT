@@ -2,9 +2,9 @@ import React, { MouseEvent } from "react";
 import { GiftEntity } from "types";
 import { Link } from "react-router-dom";
 import { fetchData } from "../../utils/fetchData";
-
-import './Gifts.css'
 import { Td, Tr } from "@chakra-ui/react";
+
+import './Gifts.css';
 
 interface Props {
     gift: GiftEntity;
@@ -31,15 +31,15 @@ export const GiftTableRow = (props: Props) => {
     }
 
     return (
-        <Tr>
+        <Tr className="GiftTableRow__oneElement">
             <Td>
-                <Link to={`/gift/${props.gift.id}`} className="GiftTableRow__oneElement">
+                <Link to={`/gift/${props.gift.id}`}>
                     {props.gift.name}
                 </Link>
             </Td>
             <Td>{props.gift.count}</Td>
             <Td>
-                <a href="#" onClick={deleteGift}>🗑️</a>
+                <a href="#" onClick={deleteGift} className='ChldrenTableRow__action'>🗑️</a>
             </Td>
         </Tr>
     )
