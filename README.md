@@ -1,4 +1,5 @@
 # Santa App
+<img src="https://i.imgur.com/XxrCxxL.png" height='200'/>
 
 Getting started with create-react-app, during christmas break I made simple app where you can:
 * Add new childs to Santa's list;
