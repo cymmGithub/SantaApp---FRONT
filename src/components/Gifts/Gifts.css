@@ -9,9 +9,6 @@ button {
     cursor: pointer;
 }
 
-
-
-
 .GiftsList__title {
     font-size: large;
     font-weight: bold;
@@ -83,6 +80,32 @@ button {
     }
 }
 
+.GiftTableRow__oneElement {
+    font-weight: bold;
+    height: fit-content;
+}
+
 .GiftTableRow__oneElement:hover {
+    font-weight: bold;
     color: #0052ec;
+}
+
+.AddGift__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ChldrenTableRow__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+
+.AddGift__input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
 }
