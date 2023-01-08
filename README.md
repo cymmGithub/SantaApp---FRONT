@@ -1,13 +1,21 @@
 # Santa App
 <img src="https://i.imgur.com/XxrCxxL.png" height='200'/>
 
+
+
 Getting started with create-react-app, during christmas break I made simple app where you can:
 * Add new childs to Santa's list;
 * Assign gifts to childs;
 * Remove gifts from stock;
 * Inspect single gift element;
-## Made with:
+
+<a href="https://github.com/cymmGithub/SantaApp---FRONT"><strong>Frontend</strong></a> made with:
+ 
 <img src="https://skillicons.dev/icons?i=ts,react,css" />
+
+<a href="https://github.com/cymmGithub/SantaApp---BACK"><strong>Backend</strong></a> made with:
+
+<img src="https://skillicons.dev/icons?i=ts,mysql,express" />
 
 ## Available Scripts
 
