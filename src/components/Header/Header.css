@@ -1,0 +1,27 @@
+.Header__NavLink {
+  font-size: 13px;
+}
+
+.Header__title {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Monospace";
+}
+.Santa_img {
+  position: relative;
+  top: -78px;
+  right: -70%;
+  height: 90px;
+  width: fit-content;
+  filter: drop-shadow(5px 5px 5px rgb(59, 59, 59));
+}
+
+.Header__NavLink {
+  position: relative;
+  font-size: 13px;
+  top: -19px;
+  left: 2%;
+}

@@ -9,7 +9,6 @@ import { SingleGiftView } from "./views/SingleGiftView";
 export const App = () => {
   return (
     <div className="App__container">
-      <img className="Santa_img" src="https://i.imgur.com/6J1DpOn.png" alt="" />
       <Header />
       <Routes>
         <Route path="/gift" element={<GiftsView />} />

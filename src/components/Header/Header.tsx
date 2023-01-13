@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../../App.css";
+import "./Header.css";
 
 export const Header = () => {
   const colorOfLink = ({ isActive }: { isActive: boolean }) => ({
@@ -11,8 +11,10 @@ export const Header = () => {
   });
 
   return (
-    <div>
-      <h1 className="App__title">Santa App</h1>
+    <div className="Header_container">
+      <img className="Santa_img" src="https://i.imgur.com/6J1DpOn.png" alt="" />
+
+      <h1 className="Header__title">Santa App</h1>
       <span className="Header__NavLink">
         Menu:{" "}
         <NavLink style={colorOfLink} to="/child">
