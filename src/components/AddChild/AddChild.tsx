@@ -3,7 +3,7 @@ import React, { FormEvent, useState } from "react";
 import { fetchData } from "../../utils/fetchData";
 import { CreateChildReq } from "types";
 
-import "../../App.css";
+import "./AddChild.css";
 
 interface Props {
   onChildsChange: () => void;

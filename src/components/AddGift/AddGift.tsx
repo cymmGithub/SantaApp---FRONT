@@ -3,7 +3,7 @@ import React, { FormEvent, useState } from "react";
 import { fetchData } from "../../utils/fetchData";
 import { CreateGiftReq } from "types";
 
-import "../Gifts/Gifts.css";
+import "./AddGift.css";
 
 interface Props {
   onGiftsChange: () => void;
